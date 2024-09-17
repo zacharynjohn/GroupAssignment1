@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Sep  5 17:56:32 2024
-
-@author: conno
+Variables:
+Inputs
+Outputs
 """
-
-# MindTap 1.4 Homework - Circle
 
 
 interest_rate = 0.075
