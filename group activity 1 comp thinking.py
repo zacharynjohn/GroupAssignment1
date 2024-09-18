@@ -2,7 +2,7 @@
 """
 Coders: Connor Boger, Noelle Gallagher, Quinn Geiger, Zach Johnson
 Variables:
-- income --> User's income for the year
+- user_income --> User's income for the year
 - partner_income --> Partner's income for the year
 - mfj --> Total household income for User and Partner
 
@@ -10,19 +10,28 @@ Inputs
 Outputs
 """
 
-# interest_rate = 0.075
-
-# if interest_rate < 0.05:
-    print("The interest rate is low")
-# elif interest_rate >= .07:
-    print("This interest rate is very high.")
-
-income = float(input("What is your income for this year?")
-    
-mfj = input("Are you married filing jointly? - Yes or No")
+user_income = float(input("What is your income for this year? "))
+ 
+# Is the User Single or Married?
+   
+mfj = input("Are you married filing jointly? - Yes or No: ")
 if mfj == "Yes":
-   partner_income = int(input("What is your partner's income for the year?")
+   partner_income = float(input("What is your partner's income for the year? "))
+else:
+    print("All done!")
 
+mfj_income = user_income + partner_income
+
+print("Your household income is $", mfj_income,"!")
+
+#State Tax
+
+if mfj_income <= 12420:
+   state_tax = print("You owe", (mfj_income * .044), "in state taxes!")
+elif mfj_income >= 12421 and mfj_income <= 62100:
+    state_tax = print("You owe", 546.48 + ((mfj_income-12420)*.0482), "in state taxes!")
+else:
+    state_tax = print("You owe", 2941.06 + ((mfj_income-62100)*.057), "in state taxes!")
 
 #Federal
 if mfj == "Yes":
