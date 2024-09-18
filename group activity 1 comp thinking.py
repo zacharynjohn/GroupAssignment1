@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
+    
 """
 Coders: Connor Boger, Noelle Gallagher, Quinn Geiger, Zach Johnson
+
 Variables:
-- user_income --> User's income for the year
+- income --> User's income for the year
 - partner_income --> Partner's income for the year
-- mfj --> Total household income for User and Partner
+- mfj --> Determines whether or not the User is married
+- mfj_income --> The total houeshold income between User and Spouse
+- state_tax --> The total state tax the User(s) will pay
 
 Inputs
+--> Will ask the User their income
+---> Will ask the income of the User's Spouse
+
 Outputs
 """
+
+# User Income 
 
 user_income = float(input("What is your income for this year? "))
  
@@ -17,12 +26,15 @@ user_income = float(input("What is your income for this year? "))
 mfj = input("Are you married filing jointly? - Yes or No: ")
 if mfj == "Yes":
    partner_income = float(input("What is your partner's income for the year? "))
-else:
-    print("All done!")
+if mfj == "No":
+    single_income = user_income
+    
 
 mfj_income = user_income + partner_income
-
-print("Your household income is $", mfj_income,"!")
+if mfj == "Yes":
+    print("Your household income is $", mfj_income,"!")
+else:
+    print("Your household income is $", single_income, "!")
 
 #State Tax
 
@@ -33,9 +45,7 @@ elif mfj_income >= 12421 and mfj_income <= 62100:
 else:
     state_tax = print("You owe", 2941.06 + ((mfj_income-62100)*.057), "in state taxes!")
 
-#Federal
+#Federal Tax
+
 if mfj == "Yes":
     income = income - standard_deduction
-    
-    
-    
