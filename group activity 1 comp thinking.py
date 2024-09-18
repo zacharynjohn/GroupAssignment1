@@ -8,6 +8,7 @@ Variables:
 - partner_income --> Partner's income for the year
 - mfj --> Determines whether or not the User is married
 - mfj_income --> The total houeshold income between User and Spouse
+- singe_income --> Portrayal of the User's income if the User is single
 - state_tax --> The total state tax the User(s) will pay
 
 Inputs
