@@ -70,7 +70,20 @@ elif taxable_mfj >= 487451 and <= 731200
 else taxable_mfj >= 731201
     print("You owe" 196669.50 + ((taxable_mfj - 731200) * .37) "in federal taxes")
 
-
+if taxable_s <= 11600 :
+    federal_tax = print("You owe", (taxable_s * .1))
+elif taxable_s >=11600 and taxable_s <=47150 :
+    federal_tax = print("You owe", 1160 + (taxable_s - 11600)*.12, "In federal taxes" )
+elif taxable_s >= 47151 and taxable_s <=100525:
+    federal_s = print("You owe", 5426 + (taxable_s - 47150)*.22, "in federal taxes")
+elif taxable_s >=100526 and taxable_s <=191950 :
+    federal_tax = print("You owe", 17168.5 + (taxable_s - 100525)*.24, "in federal taxes")
+elif taxable_s >=19151 and taxable_s <= 243725:
+    federal_s = print("You owe", 39110.5 + (taxable_s - 191950)*.32, "in federal taxes")
+elif taxable_s >= 243726 amd taxable_s <= 609350:
+    federal_s = print("you owe", 55678.5 + (taxable_s - 243725)*.35, "in federal taxes" )
+else taxable_s > 609351 :
+    federal_s = print("you owe", 183647.25 + (taxable_s - 609350)*.37, "in federal taxes")
 
 
 
