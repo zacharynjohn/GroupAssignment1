@@ -54,8 +54,10 @@ if mfj == "Yes":
     taxable_mfj = mfj_income - standard_deduction2
 if mfj == "No" :
     taxable_mfj = income - standard_deduction1
-
-if taxable_mfj <= 23200 :
+    
+if taxable_mfj < 0 :
+    federal_tax = print("You owe $0 in federal taxes!")
+elif taxable_mfj <= 23200 :
     federal_tax = print("You owe", (taxable_mfj * .10) "in federal taxes!")
 elif taxable_mfj >= 23201 and <= 94300 :
     federal_tax = print("you owe", 2320 + ((taxable_mfj - 23200 )* .12) "in federal taxes!")
