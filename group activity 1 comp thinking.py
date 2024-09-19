@@ -48,5 +48,33 @@ else:
 
 #Federal Tax
 
+standard_deduction1 = 14600
+standard_dedudction2 = 29200
 if mfj == "Yes":
-    income = income - standard_deduction
+    taxable_mfj = mfj_income - standard_deduction2
+if mfj == "No" :
+    taxable_mfj = income - standard_deduction1
+
+if taxable_mfj <= 23200 :
+    federal_tax = print("You owe", (taxable_mfj * .10) "in federal taxes!")
+elif taxable_mfj >= 23201 and <= 94300 :
+    federal_tax = print("you owe", 2320 + ((taxable_mfj - 23200 )* .12) "in federal taxes!")
+elif taxable_mfj >=94301 and <201050 :
+    federal_tax = print("you owe" 10852 + ((taxable_mfj - 94300) * .22) "in federal taxes!")
+elif taxable_mfj >= 201051 and <= 383900 :
+    federal_tax = print("You owe" 34337 + ((taxable_mfj - 201050) * .24) "in federal taxes!")
+elif taxable_mfj >= 383901 and <= 487450 :
+    federal_tax = print("You owe" 78221 + ((taxable_mfj - 383900) * .32) "in federal taxes!")
+elif taxable_mfj >= 487451 and <= 731200
+    print("You owe" 111357 + ((taxable_mfj - 487450) * .35) "in federal taxes!")
+else taxable_mfj >= 731201
+    print("You owe" 196669.50 + ((taxable_mfj - 731200) * .37) "in federal taxes")
+
+
+
+
+
+
+    
+
+
