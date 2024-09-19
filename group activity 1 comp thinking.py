@@ -45,7 +45,12 @@ elif mfj_income >= 12421 and mfj_income <= 62100:
     state_tax = print("You owe", 546.48 + ((mfj_income-12420)*.0482), "in state taxes!")
 else:
     state_tax = print("You owe", 2941.06 + ((mfj_income-62100)*.057), "in state taxes!")
-
+if single_income >= 0 and single_income <= 6210:
+    state_tax = print("You owe", (state_tax *.044), "in state taxes in 2024!")
+elif single_income > 6210 and single_income <=31050:
+    state_tax = print("You owe", (273+(state_tax - 6210) * .0482), "in state taxes in 2024!") 
+elif single_income >31050:
+    state_tax = print("You owe", (1470.53+(state_tax - 31050) * .057), "in state taxes in 2024!")
 #Federal Tax
 
 standard_deduction1 = 14600
